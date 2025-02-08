@@ -19,7 +19,7 @@
   <hr>
 
   <h2>🚀 Live Demo</h2>
-  <p>Check out the live version here: <a href="#">Book Library Live</a> 🌟</p>
+  <p>Check out the live version here: <a href="https://shivansh023023.github.io/BookLibrary/">Book Library Live</a> 🌟</p>
   <hr>
 
   <h2>📝 Tech Stack</h2>
