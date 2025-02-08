@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBookShelf - Library Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MyBookShelf</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for books...">
+                <button id="searchButton">Search</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="library-section">
+                <h2>My Library</h2>
+                <div class="shelf-controls">
+                    <select id="filterShelf">
+                        <option value="all">All Books</option>
+                        <option value="reading">Currently Reading</option>
+                        <option value="completed">Completed</option>
+                        <option value="wishlist">Wishlist</option>
+                    </select>
+                </div>
+                <div id="myLibrary" class="books-grid"></div>
+            </section>
+
+            <section class="recommendations-section">
+                <h2>Recommended Books</h2>
+                <div class="genre-filters">
+                    <button class="genre-btn" data-genre="fiction">Fiction</button>
+                    <button class="genre-btn" data-genre="mystery">Mystery</button>
+                    <button class="genre-btn" data-genre="science">Science</button>
+                    <button class="genre-btn" data-genre="fantasy">Fantasy</button>
+                </div>
+                <div id="recommendedBooks" class="books-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Book Details Modal -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="bookDetails"></div>
+            <div class="shelf-controls">
+                <select id="shelfSelect">
+                    <option value="reading">Currently Reading</option>
+                    <option value="completed">Completed</option>
+                    <option value="wishlist">Wishlist</option>
+                </select>
+                <button id="addToLibrary">Add to Library</button>
+            </div>
+            <div class="progress-tracker">
+                <label for="readingProgress">Reading Progress:</label>
+                <input type="range" id="readingProgress" min="0" max="100" value="0">
+                <span id="progressValue">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
